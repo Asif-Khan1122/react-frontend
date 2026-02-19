@@ -4,36 +4,36 @@ import "./HomePage.css";
 export function HomePage() {
   return (
     <>
-      <div class='header'>
-        <div class='left-section'>
-          <a href='index.html' class='header-link'>
-            <img class='logo' src='images/logo-white.png' />
-            <img class='mobile-logo' src='images/mobile-logo-white.png' />
+      <div className='header'>
+        <div className='left-section'>
+          <a href='index.html' className='header-link'>
+            <img className='logo' src='images/logo-white.png' />
+            <img className='mobile-logo' src='images/mobile-logo-white.png' />
           </a>
         </div>
 
-        <div class='middle-section'>
-          <input class='search-bar' type='text' placeholder='Search' />
+        <div className='middle-section'>
+          <input className='search-bar' type='text' placeholder='Search' />
 
-          <button class='search-button'>
-            <img class='search-icon' src='images/icons/search-icon.png' />
+          <button className='search-button'>
+            <img className='search-icon' src='images/icons/search-icon.png' />
           </button>
         </div>
 
-        <div class='right-section'>
-          <a class='orders-link header-link' href='orders.html'>
-            <span class='orders-text'>Orders</span>
+        <div className='right-section'>
+          <a className='orders-link header-link' href='orders.html'>
+            <span className='orders-text'>Orders</span>
           </a>
 
-          <a class='cart-link header-link' href='checkout.html'>
-            <img class='cart-icon' src='images/icons/cart-icon.png' />
-            <div class='cart-quantity'>3</div>
-            <div class='cart-text'>Cart</div>
+          <a className='cart-link header-link' href='checkout.html'>
+            <img className='cart-icon' src='images/icons/cart-icon.png' />
+            <div className='cart-quantity'>3</div>
+            <div className='cart-text'>Cart</div>
           </a>
         </div>
       </div>
 
-      <div class='home-page'>
+      <div className='home-page'>
         <div class='products-grid'>
           <div class='product-container'>
             <div class='product-image-container'>
