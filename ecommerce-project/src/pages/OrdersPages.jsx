@@ -1,5 +1,6 @@
 import { Header } from "../components/Header";
 import "./OrdersPages.css";
+import { HomePage } from "./HomePage";
 
 export function OrdersPage() {
   return (

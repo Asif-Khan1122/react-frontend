@@ -1,8 +1,9 @@
 import axios from "axios";
 import { Header } from "../components/Header";
 import { useEffect, useState } from "react";
-import { formatMoney } from "../utils/mpney";
+import { formatMoney } from "../utils/money";
 import "./HomePage.css";
+import { Link } from "react-router-dom";
 
 export function HomePage({ cart }) {
   const [products, setProducts] = useState([]);
@@ -15,6 +16,18 @@ export function HomePage({ cart }) {
   return (
     <>
       <Header cart={cart} />
+      <nav
+        style={{
+          display: "flex",
+          gap: "20px",
+          alignItems: "center",
+          padding: "10px 20px",
+        }}
+      >
+        <Link to='/'>Home</Link>
+        <Link to='/orders'>Orders</Link>
+        <Link to='/checkout'>Checkout</Link>
+      </nav>
 
       <div className='home-page'>
         <div className='products-grid'>
