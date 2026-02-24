@@ -5,12 +5,13 @@ import "./HomePage.css";
 import { ProductGrid } from "./ProductsGrid";
 import { Link } from "react-router-dom";
 
-export function HomePage({ cart }) {
+export function HomePage({ cart, loadCart }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const getHomeData = async () => {
       try {
         const response = await axios.get("/api/products");
+        console.log("Product recieved:", response.data);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -36,7 +37,7 @@ export function HomePage({ cart }) {
       </nav>
 
       <div className='home-page'>
-        <ProductGrid products={products} />
+        <ProductGrid products={products} loadCart={loadCart} />
       </div>
     </>
   );
