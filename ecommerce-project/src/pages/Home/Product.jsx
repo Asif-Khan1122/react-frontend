@@ -13,6 +13,8 @@ export function Product({ product, loadCart }) {
     });
 
     await loadCart();
+    setShowAdded(true);
+    setTimeout(() => setShowAdded(false), 2000);
   };
 
   return (
@@ -39,16 +41,18 @@ export function Product({ product, loadCart }) {
       <div className='product-quantity-container'>
         <select
           value={quantity}
-          onChange={(event) => {
-            const quantitySelected = Number(event.target.value);
-            setQuantity(quantitySelected);
-          }}
+          onChange={(event) => setQuantity(Number(event.target.value))}
         >
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
-            <option key={num} value={num}>
-              {num}
-            </option>
-          ))}
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
         </select>
       </div>
 
